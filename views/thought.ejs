@@ -1,0 +1,28 @@
+<%- include('partials/header') %>
+
+<div class="container">
+  <div class="jumbotron centered">
+    <i class="fas fa-key fa-6x"></i>
+    <i class="fa fa-lightbulb-exclamation-on fa-6x"></i>
+    <br />
+    <h1 class="display-3">Daily THOUGHTS</h1>
+    <br />
+
+    <% user.secret.forEach(function(secrets){ %>
+    <p class="secret-text">
+      <%= secrets %><!--<samp style="float: right">Mukul</samp>&nbsp;<span
+        style="float: right; margin-right: 20px"
+        >Time</span
+      >-->
+    </p>
+    <%}) %>
+
+    <hr />
+    <a class="btn btn-light btn-lg" href="/logout" role="button">Log Out</a>
+    <a class="btn btn-dark btn-lg" href="/submit" role="button"
+      >Submit a Thought</a
+    >
+  </div>
+</div>
+
+<%- include('partials/footer') %>
